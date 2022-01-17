@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="_MP_AllSource.master.cs" Inherits="_MP_AllSource" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <%--fontawesome-5--%>
+    <link href="Styles/fontawesome-5.0.13/css/fontawesome-all.min.css" rel="stylesheet" />
+
+    <%--jQuery v3.4.1--%>
+    <script src="Scripts/jquery.min.js"></script>
+
+    <%--jQuery Migrate v3.1.0--%>
+    <script src="Scripts/jquery-migrate.min.js"></script>
+
+    <%--jQuery UI - v1.12.1--%>
+    <%--<script src="Scripts/jquery-ui/external/jquery/jquery.js"></script>--%>
+    <script src="Scripts/jquery-ui/jquery-ui.min.js"></script>
+    <link href="Scripts/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery.reDefaultTools.js"></script>
+
+    <%--Bootstrap--%>
+    <link href="Styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Styles/bootstrap/js/popper.min.js"></script>
+    <script src="Styles/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Styles/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <link href="Styles/master_bootstrap-add.css" rel="stylesheet" />
+
+    <%--bootbox--%>
+    <script src="Scripts/bootbox/bootbox.min.js"></script>
+    <script src="Scripts/bootbox/bootbox-common-th.js"></script>
+
+    <%--Checkbox--%>
+    <link href="Styles/bootstrap-glyphicon-checkbox/bootstrap-checkbox.css" rel="stylesheet" />
+    <link href="Styles/bootstrap-checkbox/build.css" rel="stylesheet" />
+
+    <%--Bootstrap-select--%>
+    <link href="Scripts/Multiselect/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="Scripts/Multiselect/bootstrap-select.min.js"></script>
+
+    <%--Icon--%>
+    <link href="Styles/icon.css" rel="stylesheet" />
+
+    <%--Linq JS--%>
+    <script src="Scripts/LinqJS/linq.min.js"></script>
+    <script src="Scripts/LinqJS/jquery.linq.min.js"></script>
+
+    <%--jquery-pagination--%>
+    <script src="Scripts/jquery-pagination/jquery.paging.js"></script>
+    <script src="Scripts/jquery-pagination/paging-custom-format.js"></script>
+
+    <%--FancyBox--%>
+    <link href="Scripts/fancybox3/dist/jquery.fancybox.css" rel="stylesheet" />
+    <script src="Scripts/fancybox3/dist/jquery.fancybox.js"></script>
+
+    <!-- ui autocomplete -->
+   <%-- <link href="Scripts/ui/jquery-ui%20v.1.10.3.css" rel="stylesheet" />
+    <script src="Scripts/ui/jquery-ui.min.js"></script>--%>
+
+    <%--BlockUI--%>
+    <link href="Styles/BlockUI-LoadingWrapper.css" rel="stylesheet" />
+    <script src="Scripts/jquery.blockUI.js"></script>
+
+    <%--Form Validate--%>
+    <script src="Scripts/FormValidation/formValidation.min.js"></script>
+    <script src="Scripts/FormValidation/bootstrap.min.js"></script>
+    <link href="Scripts/FormValidation/formValidation.min.css" rel="stylesheet" />
+
+    <%--bootstrap-select--%>
+    <link href="Scripts/Multiselect/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="Scripts/Multiselect/bootstrap-select.min.js"></script>
+
+    <%--InputMask : Jquery for autoformat input--%>
+    <script src="Scripts/jquery-inputmask/min/inputmask/inputmask.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-inputmask/min/inputmask/inputmask.numeric.extensions.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-inputmask/inputmask/jquery.inputmask.js"></script>
+
+    <%--Bootstrap-Datepicker--%>
+    <link href="Scripts/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+    <%--File Upload--%>
+    <link href="Scripts/Fileupload/src/jquery.fileuploader.css" rel="stylesheet" />
+    <script src="Scripts/Fileupload/src/jquery.fileuploader.js"></script>
+
+    <%--tooltipster--%>
+    <link href="Scripts/tooltipster/tooltipster.bundle.css" rel="stylesheet" />
+    <link href="Scripts/tooltipster/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css" rel="stylesheet" />
+    <script src="Scripts/tooltipster/tooltipster.bundle.min.js"></script>
+
+    <%--System--%>
+    <link href="Styles/easy.css" rel="stylesheet" />
+    <link href="Styles/Custom.css" rel="stylesheet" />
+
+    <script src="Scripts/CommonScript.js"></script>
+    <script src="Scripts/System/sysFunction.js"></script>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="mainBody" runat="server">
+    <form id="form1" runat="server" autocomplete="off">
+
+        <asp:HiddenField ID="hidSessionTimeOut" runat="server" />
+        <asp:ScriptManager ID="smgAll" runat="server"></asp:ScriptManager>
+
+        <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+
+        <script type="text/javascript">
+            $(function () {
+                SetTooltip();
+            });
+        </script>
+    </form>
+</body>
+</html>

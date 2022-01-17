@@ -1,0 +1,308 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_MP_AllSource.master" AutoEventWireup="true" CodeFile="_MP_Front.master.cs" Inherits="_MP_Front" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="Server">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="Images/ico/ptt_weblogo-144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="Images/ico/ptt_weblogo-114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="Images/ico/ptt_weblogo-72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="Images/ico/ptt_weblogo-57.png" />
+    <link rel="shortcut icon" href="Images/ico/ptt_weblogo-favicon.png" />
+
+    <link href="Styles/_MP_Front.css" rel="stylesheet" />
+    <script src="Scripts/_MP_Front.js"></script>
+
+    <script type="text/javascript">
+        var isTimeOut = false;
+
+        $(function () {
+            isTimeOut = $("input[id$=hidSessionTimeOut]").val() == "Y";
+
+            SetTooltip();            
+
+            $('div[id$=divSearch]').on('keydown', function (e) {
+                if (e.which == 13)  //e.which = keyCode (ENTER : 13)
+                    SearchData();
+            });
+        });
+    </script>
+
+    <%-- Session Timeout --%>
+    <script runat="server">
+
+        public string TimeOutUrl = "logout.aspx";//"~/AD/index.aspx";
+        public int nMinute = 60 * 1000;
+
+        public int PopupShowDelay
+        {
+            get { return nMinute * (10); } //เวลาที่ นับใน Popup
+        }
+
+        protected string QuotedTimeOutUrl
+        {
+            get { return '"' + ResolveClientUrl(TimeOutUrl).Replace("\"", "\\\"") + '"'; }
+        }
+
+        public int getnTimeOut
+        {
+            get { return nMinute * (Session.Timeout - 6); } // เมื่อเวลาผ่านไป x - 6 จะแสดง Popup
+        }
+
+    </script>
+
+    <%-- Session Timeout Client Call --%>
+    <script type="text/javascript">
+        window.SessionTimeout = (function() {
+            var _timeLeft, _popupTimer, _countDownTimer;
+
+            var stopTimers = function() {
+                window.clearTimeout(_popupTimer);
+                window.clearTimeout(_countDownTimer);
+            };
+
+            var updateCountDown = function() {
+                var min = Math.floor(_timeLeft / 60);
+                var sec = _timeLeft % 60;
+                if(sec < 10)
+                    sec = "0" + sec;
+                document.getElementById("CountDownHolder").innerHTML = min + ":" + sec;
+
+                if(_timeLeft > 0) {
+                    _timeLeft--;
+                    _countDownTimer = window.setTimeout(updateCountDown, 1000);
+
+                } else  {
+                    document.location =  <%= QuotedTimeOutUrl %>;
+                }            
+            };
+
+            var showPopup = function() {
+                _timeLeft = 300; //หน่วยเป็นวินาที เพื่อให้ตัดออกหน้า default อัตโนมัติหากไม่กดปุ่ม
+                updateCountDown();
+                $("#MPPopupSessionTimeout").modal({
+                    keyboard: false,
+                    backdrop:false
+                });
+            };
+
+            var schedulePopup = function() {       
+                stopTimers();
+                _popupTimer = window.setTimeout(showPopup,<%= getnTimeOut %>);// set เวลาที่ต้องการให้แสดง popup เมื่อเวลาผ่านไป 15 นาที
+            };
+
+            var sendKeepAlive = function() {
+                stopTimers();
+                $("#MPPopupSessionTimeout").modal("hide");
+                CallbackServer();
+                SessionTimeout.schedulePopup();
+            };
+
+            return {
+                schedulePopup: schedulePopup,
+                sendKeepAlive: sendKeepAlive
+            };
+
+        })();
+
+        //KeepSessionAlive
+        function CallbackServer(){
+            url = "Ashx/KeepSessionAlive.ashx?";
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", url, true);
+            xmlHttp.send();          
+        }  
+        
+        $(function() {
+            SessionTimeout.schedulePopup();
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphBody" runat="Server">
+    <div id="SITE_NAVBAR">
+        <div id="INFO_SIDE">
+            <div class="info-icon">
+                <i class="fa fa-user-alt"></i>
+            </div>
+            <div class="info-detail">
+                <div class="info-pre">ยินดีต้อนรับ</div>
+                <div class="info-title"><% =sName %></div>
+                <div class="info-role"><% =sRole %></div>
+            </div>
+        </div>
+        <ul class="menu menu-user">
+            <li class="liUser_info">
+                <a href="user_info.aspx">
+                    <i class="fa fa-user-circle"></i>
+                    <span>ข้อมูลส่วนตัว</span>
+                </a>
+            </li>
+            <li id="li2" runat="server">
+                <a class="aLogout" href="#">
+                    <i class="fa fa-sign-out-alt"></i>
+                    <span>ออกจากระบบ</span>
+                </a>
+            </li>
+        </ul>
+        <div id="MENU_SIDE">
+            <ul id="menuSide" runat="server" class="menu"></ul>
+        </div>
+    </div>
+    <div id="SITE_CONTENT">
+        <div id="CONTENT_BLOCK">
+            <a id="MENU_CLOSE"><i class="fa fa-exchange-alt"></i></a>
+        </div>
+        <div id="HEAD" style="z-index: 999">
+            <div id="TITLE">
+                <div class="container pos-relative">
+                    <ul id="LOGO">
+                        <li class="logo-pttgc"><a>
+                            <img src="Images/ico-pttgc.png" /></a></li>
+                        <li class="title">
+                            <div class="title-main">Sustainability - Social Capital</div>
+                            <div class="title-sub">Corporate Social Responsibility</div>
+                        </li>
+                    </ul>
+                    <div id="INFO_TOP">
+                        <div class="info-icon">
+                            <i class="fa fa-user-alt"></i>
+                        </div>
+                        <div class="info-detail">
+                            <div class="info-pre">ยินดีต้อนรับ</div>
+                            <div class="info-title"><% =sName %></div>
+                            <div class="info-role"><% =sRole %></div>
+                        </div>
+                    </div>
+                    <a id="MENU_TRIGGER" role="button"><i class="fa fa-bars"></i></a>
+                </div>
+            </div>
+            <div id="MENU_TOP">
+                <div class="container">
+                    <ul id="menuTop" runat="server" class="menu"></ul>
+                    <%--<ul class="menu">
+                        <li>
+                            <a class="active"><i class="fa fa-chart-line"></i>&nbsp;Dashboard</a>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-clipboard-list"></i>&nbsp;Budget Plan</a>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-star"></i>&nbsp;Project & Task Plan</a>
+                        </li>
+                        <li>
+                            <a><i class="fa fa-check-double"></i>&nbsp;Approved Plan</a>
+                        </li>
+                        <li class="has-children">
+                            <a><i class="fa fa-paste"></i>&nbsp;Report
+                            </a>
+                            <ul class="menu-sub">
+                                <li><a><i class="fa fa-list-ol"></i>&nbsp;Report 1</a></li>
+                                <li><a><i class="fa fa-list-ol"></i>&nbsp;Report 2</a></li>
+                                <li><a><i class="fa fa-list-ol"></i>&nbsp;Report 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>--%>
+                    <ul class="menu menu-user">
+                        <li class="liUser_info">
+                            <a href="user_info.aspx">
+                                <i class="fa fa-user-circle"></i>
+                                <span>ข้อมูลส่วนตัว</span>
+                            </a>
+                        </li>
+                        <li id="li1" runat="server">
+                            <a class="aLogout" href="#">
+                                <i class="fa fa-sign-out-alt"></i>
+                                <span>ออกจากระบบ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="BODY">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="cphBody" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="FOOT">
+            <div class="container">
+                <div class="footer-area">
+                    <div class="footer-pttgc">
+                        <div class="footer-pttgc-icon">
+                            <img src="Images/ico-pttgc.png" />
+                        </div>
+                        <div class="footer-pttgc-info">
+                            <%--                            <div class="footer-pttgc-copyright">
+                                Copyright &copy; 2020,<br />
+                                PTT Global Chemical Public Company Limited All rights reserved
+                            </div>--%>
+                            <div class="footer-pttgc-about">
+                                <div class="footer-pttgc-about-title">Copyright &copy; 2020,</div>
+                                <div class="footer-pttgc-about-title">PTT Global Chemical Public Company Limited</div>
+                                <div class="footer-pttgc-about-address">
+                                    555/1 Energy Complex Building A, 14th - 18th Floor, Vibhavadi Rangsit Road, Chatuchak, Chatuchak, Bangkok 10900 Thailand.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%--<div id="FOOT">
+            <div class="container">
+                <div class="footer-area">
+                    <div class="footer-pttgc">
+                        <div class="footer-pttgc-info">
+                            <div class="footer-pttgc-copyright">
+                                Copyright &copy; 2019<br />
+                                PTT Global Chemical Public Company Limited All rights reserved
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>--%>
+    </div>
+    <asp:HiddenField ID="hidSessionTimeOut" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphScript" runat="Server">
+    <asp:HiddenField ID="hidMenuID" runat="server" />
+    <asp:HiddenField ID="hddContract" runat="server" />
+
+    <asp:ContentPlaceHolder ID="cphScript" runat="server"></asp:ContentPlaceHolder>
+
+    <%-- Popup Session Timeout --%>
+    <div id="MPPopupSessionTimeout" class="modal modal-warning" data-backdrop="false" data-keyboard="false" style="background: rgba(0, 0, 0, 0.3);">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border-radius: 8px;">
+                <div class="modal-header" style="border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                    <h5 class="modal-title">หมดอายุการใช้งาน</h5>
+                </div>
+                <div class="modal-body">
+                    กำลังจะหมดอายุการใช้งาน
+                        <br />
+                    <br />
+                    <span id="CountDownHolder"></span>
+                    <br />
+                    <br />
+                    คลิก ตกลง เพื่อดำเนินการต่ออายุการใช้งาน
+                </div>
+                <div class="modal-footer" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+                    <button type="button" class="btn btn-outline-success" onclick="SessionTimeout.sendKeepAlive()"><i class="glyphicon glyphicon-ok"></i>&nbsp; ตกลง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.menu-sub > li > a.active').parent().parent().parent().find('a:first').addClass('active');
+
+            $('.aLogout').click(function(){
+                DialogLogout();
+            });
+
+            if (GetValTextBox('hddContract') == "N") { $('.liUser_info').remove();}
+           
+        });
+    </script>
+</asp:Content>
