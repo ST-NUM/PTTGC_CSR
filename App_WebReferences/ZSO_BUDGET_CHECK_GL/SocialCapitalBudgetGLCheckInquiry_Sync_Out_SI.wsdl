@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="http://pttgc.com/i_controlling/budget/budgetglcheck_inquiry/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI" targetNamespace="http://pttgc.com/i_controlling/budget/budgetglcheck_inquiry/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://pttgc.com/i_controlling/budget/budgetglcheck_inquiry/" targetNamespace="http://pttgc.com/i_controlling/budget/budgetglcheck_inquiry/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="SocialCapitalBudgetGLCheckInquiryRes_MT" type="p1:SocialCapitalBudgetGLCheckInquiryRes_DT" />
+      <xsd:element name="SocialCapitalBudgetGLCheckInquiryReq_MT" type="p1:SocialCapitalBudgetGLCheckInquiryReq_DT" />
+      <xsd:complexType name="SocialCapitalBudgetGLCheckInquiryReq_DT">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">1ad144db472a11eaa4660000007595c3</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="IV_FYEAR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6510008c6b0011e9a9f70a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_ORD_AUART" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6510008d6b0011e9b1d60a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_ORD_AUFNR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6510008e6b0011e9b3030a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_ORD_OBJNR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">6510008f6b0011e9bb920a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_WBS_OBJNR" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">651000906b0011e990780a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_WBS_POSID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">651000916b0011e9b6530a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="IV_WBS_PRART" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">651000926b0011e9c3330a002700000f</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SocialCapitalBudgetGLCheckInquiryRes_DT">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">0b7dbb54472a11eaca5f0000007595c3</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ET_ZBE_BUDGET_CHECK_GL">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">58e4bbec6b0811e9a8460a002700000f</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="ITEMS">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">58e4bbeb6b0811e988090a002700000f</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="MANDT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e453b66b0811e9849e0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="WEB_INDEX" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e453b76b0811e9847a0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_COUNT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e453b86b0811e9bc160a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="WEB_ORD_AUFNR" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e453b96b0811e9af030a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="WEB_WBS_POSID" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c236b0811e9af030a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_GL" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c246b0811e9c85b0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="WEB_FYEAR" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c256b0811e9ab0b0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_BUD" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c266b0811e99a4d0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_ACT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c276b0811e9b1690a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_CMT" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c286b0811e9aeec0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_DIS" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c296b0811e98fb50a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_BAL" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e48c2a6b0811e992160a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_MSG" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e4bbe86b0811e9adaa0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_DATE" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e4bbe96b0811e9ce140a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="SAP_TIME" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">58e4bbea6b0811e9996c0a002700000f</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SocialCapitalBudgetGLCheckInquiryReq_MT">
+    <wsdl:documentation />
+    <wsdl:part name="SocialCapitalBudgetGLCheckInquiryReq_MT" element="p1:SocialCapitalBudgetGLCheckInquiryReq_MT" />
+  </wsdl:message>
+  <wsdl:message name="SocialCapitalBudgetGLCheckInquiryRes_MT">
+    <wsdl:documentation />
+    <wsdl:part name="SocialCapitalBudgetGLCheckInquiryRes_MT" element="p1:SocialCapitalBudgetGLCheckInquiryRes_MT" />
+  </wsdl:message>
+  <wsdl:portType name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI">
+    <wsdl:documentation />
+    <wsdl:operation name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI" />
+      </wsp:Policy>
+      <wsdl:input message="p1:SocialCapitalBudgetGLCheckInquiryReq_MT" />
+      <wsdl:output message="p1:SocialCapitalBudgetGLCheckInquiryRes_MT" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SIBinding" type="p1:SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SocialCapitalBudgetGLCheckInquiry_Sync_Out_SIService">
+    <wsdl:port name="HTTP_Port" binding="p1:SocialCapitalBudgetGLCheckInquiry_Sync_Out_SIBinding">
+      <address location="http://sgcrywd01.pttgc.corp:4443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SocialCapital&amp;receiverParty=&amp;receiverService=&amp;interface=SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI&amp;interfaceNamespace=http%3A%2F%2Fpttgc.com%2Fi_controlling%2Fbudget%2Fbudgetglcheck_inquiry%2F" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SocialCapitalBudgetGLCheckInquiry_Sync_Out_SIBinding">
+      <address location="https://sgcrywd01.pttgcgroup.com:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SocialCapital&amp;receiverParty=&amp;receiverService=&amp;interface=SocialCapitalBudgetGLCheckInquiry_Sync_Out_SI&amp;interfaceNamespace=http%3A%2F%2Fpttgc.com%2Fi_controlling%2Fbudget%2Fbudgetglcheck_inquiry%2F" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

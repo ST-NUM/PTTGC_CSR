@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://pttgc.com/i_controlling/budget/budgetcheck_inquiry/" xmlns:rfc="urn:sap-com:document:sap:rfc:functions" name="SocialCapitalBudgetCheckInquiry_Sync_Out_SI" targetNamespace="http://pttgc.com/i_controlling/budget/budgetcheck_inquiry/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SocialCapitalBudgetCheckInquiry_Sync_Out_SI" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="ZSO_BUDGET_CHECK">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" name="IT_BUDGET_CHECK">
+              <xsd:annotation>
+                <xsd:documentation>Table Type import for ZSO_BUDGET_CHECK</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="rfc:ZSO_BUDGET_CHECK_S" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ZSO_BUDGET_CHECK.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" name="ET_BUDGET_CHECK">
+              <xsd:annotation>
+                <xsd:documentation>Log for ZSO_BUDGET_CHECK</xsd:documentation>
+              </xsd:annotation>
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="rfc:ZSO_BUDG_CHK_LOG" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:time rfc:genericTime" />
+      </xsd:simpleType>
+      <xsd:simpleType name="genericTime">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="..:..:.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:date rfc:genericDate" />
+      </xsd:simpleType>
+      <xsd:complexType name="ZSO_BUDG_CHK_LOG">
+        <xsd:annotation>
+          <xsd:documentation>Log for ZSO_BUDGET_CHECK</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MANDT">
+            <xsd:annotation>
+              <xsd:documentation>Client</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WEB_INDEX">
+            <xsd:annotation>
+              <xsd:documentation>Index No.</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="14" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_COUNT">
+            <xsd:annotation>
+              <xsd:documentation>IF WEB-INDEX duplicate then add 1</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WEB_ORD_AUFNR">
+            <xsd:annotation>
+              <xsd:documentation>Order Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WEB_APPR_POSID">
+            <xsd:annotation>
+              <xsd:documentation>Appropriation Request Number (Formatted for Coding Mask)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="24" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WEB_WBS_POSID">
+            <xsd:annotation>
+              <xsd:documentation>Work Breakdown Structure Element (WBS Element)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="24" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WEB_FYEAR">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_BUD">
+            <xsd:annotation>
+              <xsd:documentation>Budget</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_ACT">
+            <xsd:annotation>
+              <xsd:documentation>Actual</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_CMT">
+            <xsd:annotation>
+              <xsd:documentation>Commitment</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_DIS">
+            <xsd:annotation>
+              <xsd:documentation>Assigned/Distributed</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_BAL">
+            <xsd:annotation>
+              <xsd:documentation>Budget Available</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="15" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_MSG">
+            <xsd:annotation>
+              <xsd:documentation>Message Text</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_DATE" type="rfc:date">
+            <xsd:annotation>
+              <xsd:documentation>Date</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SAP_TIME" type="rfc:time">
+            <xsd:annotation>
+              <xsd:documentation>Time</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ZSO_BUDGET_CHECK_S">
+        <xsd:annotation>
+          <xsd:documentation>Structure import for ZSO_BUDGET_CHECK</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ORD_AUFNR">
+            <xsd:annotation>
+              <xsd:documentation>Order Number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ORD_OBJNR">
+            <xsd:annotation>
+              <xsd:documentation>Object number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="22" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ORD_AUART">
+            <xsd:annotation>
+              <xsd:documentation>Sales Document Type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="FYEAR">
+            <xsd:annotation>
+              <xsd:documentation>Fiscal Year</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="APPR_POSNR">
+            <xsd:annotation>
+              <xsd:documentation>Internal number for appropriation request</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="APPR_POSID">
+            <xsd:annotation>
+              <xsd:documentation>Appropriation Request Number (Formatted for Coding Mask)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="24" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="APPR_IVART">
+            <xsd:annotation>
+              <xsd:documentation>Appropriation request type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="APPR_OBJNR">
+            <xsd:annotation>
+              <xsd:documentation>CO object number for inv. prog. position</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="22" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WBS_POSID">
+            <xsd:annotation>
+              <xsd:documentation>Work Breakdown Structure Element (WBS Element)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="24" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WBS_OBJNR">
+            <xsd:annotation>
+              <xsd:documentation>Object number</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="22" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="WBS_PRART">
+            <xsd:annotation>
+              <xsd:documentation>Project type</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="rfc.ZSO_BUDGET_CHECK.Input">
+    <wsdl:documentation />
+    <wsdl:part name="parameters" element="rfc:ZSO_BUDGET_CHECK" />
+  </wsdl:message>
+  <wsdl:message name="rfc.ZSO_BUDGET_CHECK.Output">
+    <wsdl:documentation />
+    <wsdl:part name="parameters" element="rfc:ZSO_BUDGET_CHECK.Response" />
+  </wsdl:message>
+  <wsdl:portType name="SocialCapitalBudgetCheckInquiry_Sync_Out_SI">
+    <wsdl:documentation />
+    <wsdl:operation name="SocialCapitalBudgetCheckInquiry_Sync_Out_SI">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SocialCapitalBudgetCheckInquiry_Sync_Out_SI" />
+      </wsp:Policy>
+      <wsdl:input message="p1:rfc.ZSO_BUDGET_CHECK.Input" />
+      <wsdl:output message="p1:rfc.ZSO_BUDGET_CHECK.Output" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SocialCapitalBudgetCheckInquiry_Sync_Out_SIBinding" type="p1:SocialCapitalBudgetCheckInquiry_Sync_Out_SI">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SocialCapitalBudgetCheckInquiry_Sync_Out_SI">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SocialCapitalBudgetCheckInquiry_Sync_Out_SIService">
+    <wsdl:port name="HTTP_Port" binding="p1:SocialCapitalBudgetCheckInquiry_Sync_Out_SIBinding">
+      <address location="http://sgcrywd01.pttgc.corp:4443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SocialCapital&amp;receiverParty=&amp;receiverService=&amp;interface=SocialCapitalBudgetCheckInquiry_Sync_Out_SI&amp;interfaceNamespace=http%3A%2F%2Fpttgc.com%2Fi_controlling%2Fbudget%2Fbudgetcheck_inquiry%2F" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SocialCapitalBudgetCheckInquiry_Sync_Out_SIBinding">
+      <address location="https://sgcrywd01.pttgcgroup.com:443/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_SocialCapital&amp;receiverParty=&amp;receiverService=&amp;interface=SocialCapitalBudgetCheckInquiry_Sync_Out_SI&amp;interfaceNamespace=http%3A%2F%2Fpttgc.com%2Fi_controlling%2Fbudget%2Fbudgetcheck_inquiry%2F" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
