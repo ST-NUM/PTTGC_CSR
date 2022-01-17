@@ -1,0 +1,13 @@
+[10:28:06] :: 
+Error Message: The remote name could not be resolved: 'hr-webservices.pttgc.corp'
+Stack Trace:    at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at HR_WebService.CheckEmployeeInOrg(String sEmployeeID, String sOrgID) in d:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\App_Code\HR_WebService.cs:line 162
+   at admin_permission_edit.SetData(String sUserID) in d:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\admin_permission_edit.aspx.cs:line 82
+   at admin_permission_edit.Page_Load(Object sender, EventArgs e) in d:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\admin_permission_edit.aspx.cs:line 42
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+

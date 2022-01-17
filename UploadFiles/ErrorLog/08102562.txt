@@ -1,0 +1,14 @@
+[15:01:17] :: 
+Error Message: The remote name could not be resolved: 'test-hr-ws.pttgc.corp'
+Stack Trace:    at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at HR_WebService.EmployeeService_EmployeeID(String sPersonalID) in e:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\App_Code\HR_WebService.cs:line 123
+   at project_edit.SetControl(String sProjectID) in e:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\project_edit.aspx.cs:line 96
+   at project_edit.Page_Load(Object sender, EventArgs e) in e:\Project\2019\PTTGC CSR\Develop\PTTGC_CSR\project_edit.aspx.cs:line 27
+   at System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   at System.Web.UI.Control.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+ 
+*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+

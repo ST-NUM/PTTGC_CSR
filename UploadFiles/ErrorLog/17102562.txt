@@ -1,0 +1,24 @@
+[10:42:26] :: 
+Error Message: The ID 'txt' is already used by another control.
+Stack Trace:    at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[10:42:30] :: 
+Error Message: The ID 'txt' is already used by another control.
+Stack Trace:    at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[10:43:35] :: 
+Error Message: Cannot create an object of type 'System.Web.UI.WebControls.AutoCompleteType' from its string representation 'off' for the 'AutoCompleteType' property.
+Stack Trace:    at System.Web.UI.TemplateParser.ProcessException(Exception ex)
+   at System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+   at System.Web.UI.TemplateParser.ParseString(String text, VirtualPath virtualPath, Encoding fileEncoding)
+ 
+*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+

@@ -1,0 +1,792 @@
+[09:28:13 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E1</InternalOrderNo>
+    <InternalOrderID>OR1001020000E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:14 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E8</InternalOrderNo>
+    <InternalOrderID>OR1001020000E8</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:14 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100E1</InternalOrderNo>
+    <InternalOrderID>OR1001020100E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:15 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100P1</InternalOrderNo>
+    <InternalOrderID>OR1001020100P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:16 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020100Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:17 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E1</InternalOrderNo>
+    <InternalOrderID>OR1001020200E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:18 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E7</InternalOrderNo>
+    <InternalOrderID>OR1001020200E7</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:18 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200P1</InternalOrderNo>
+    <InternalOrderID>OR1001020200P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:19 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020200Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:19 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300E1</InternalOrderNo>
+    <InternalOrderID>OR1001020300E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:20 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300P1</InternalOrderNo>
+    <InternalOrderID>OR1001020300P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:20 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000001</InternalOrderNo>
+    <InternalOrderID>ORX10C14000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:21 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000002</InternalOrderNo>
+    <InternalOrderID>ORX10C14000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:22 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C15000001</InternalOrderNo>
+    <InternalOrderID>ORX10C15000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:22 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000001</InternalOrderNo>
+    <InternalOrderID>ORX10C17000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:23 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000003</InternalOrderNo>
+    <InternalOrderID>ORX10C17000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:23 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000004</InternalOrderNo>
+    <InternalOrderID>ORX10C17000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:24 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000001</InternalOrderNo>
+    <InternalOrderID>ORX10C18000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:25 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000002</InternalOrderNo>
+    <InternalOrderID>ORX10C18000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:25 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000003</InternalOrderNo>
+    <InternalOrderID>ORX10C18000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:26 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000004</InternalOrderNo>
+    <InternalOrderID>ORX10C18000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:26 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000005</InternalOrderNo>
+    <InternalOrderID>ORX10C18000005</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[09:28:27 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10J19000002</InternalOrderNo>
+    <InternalOrderID>ORX10J19000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:38 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E1</InternalOrderNo>
+    <InternalOrderID>OR1001020000E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:48 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E8</InternalOrderNo>
+    <InternalOrderID>OR1001020000E8</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:51 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100E1</InternalOrderNo>
+    <InternalOrderID>OR1001020100E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:52 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100P1</InternalOrderNo>
+    <InternalOrderID>OR1001020100P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:53 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020100Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:54 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E1</InternalOrderNo>
+    <InternalOrderID>OR1001020200E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:55 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E7</InternalOrderNo>
+    <InternalOrderID>OR1001020200E7</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:55 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200P1</InternalOrderNo>
+    <InternalOrderID>OR1001020200P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:56 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020200Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:57 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300E1</InternalOrderNo>
+    <InternalOrderID>OR1001020300E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:58 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300P1</InternalOrderNo>
+    <InternalOrderID>OR1001020300P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:59 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000001</InternalOrderNo>
+    <InternalOrderID>ORX10C14000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:25:59 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000002</InternalOrderNo>
+    <InternalOrderID>ORX10C14000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:00 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C15000001</InternalOrderNo>
+    <InternalOrderID>ORX10C15000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:01 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000001</InternalOrderNo>
+    <InternalOrderID>ORX10C17000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:02 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000003</InternalOrderNo>
+    <InternalOrderID>ORX10C17000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:02 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000004</InternalOrderNo>
+    <InternalOrderID>ORX10C17000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:03 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000001</InternalOrderNo>
+    <InternalOrderID>ORX10C18000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:04 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000002</InternalOrderNo>
+    <InternalOrderID>ORX10C18000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:04 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000003</InternalOrderNo>
+    <InternalOrderID>ORX10C18000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:05 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000004</InternalOrderNo>
+    <InternalOrderID>ORX10C18000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:06 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000005</InternalOrderNo>
+    <InternalOrderID>ORX10C18000005</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:26:07 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10J19000002</InternalOrderNo>
+    <InternalOrderID>ORX10J19000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:34 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E1</InternalOrderNo>
+    <InternalOrderID>OR1001020000E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:35 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020000E8</InternalOrderNo>
+    <InternalOrderID>OR1001020000E8</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:35 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100E1</InternalOrderNo>
+    <InternalOrderID>OR1001020100E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:36 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100P1</InternalOrderNo>
+    <InternalOrderID>OR1001020100P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:37 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020100Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020100Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:37 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E1</InternalOrderNo>
+    <InternalOrderID>OR1001020200E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:38 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200E7</InternalOrderNo>
+    <InternalOrderID>OR1001020200E7</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:39 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200P1</InternalOrderNo>
+    <InternalOrderID>OR1001020200P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:39 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020200Z3</InternalOrderNo>
+    <InternalOrderID>OR1001020200Z3</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:40 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300E1</InternalOrderNo>
+    <InternalOrderID>OR1001020300E1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:41 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>OPX1</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>1001020300P1</InternalOrderNo>
+    <InternalOrderID>OR1001020300P1</InternalOrderID>
+    <InternalOrdertype>OPX1</InternalOrdertype>
+    <FiscalYear>2020</FiscalYear>
+  </GLBudget>
+</CheckGLBudget> 
+***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:41 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000001</InternalOrderNo>
+    <InternalOrderID>ORX10C14000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:42 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C14000002</InternalOrderNo>
+    <InternalOrderID>ORX10C14000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:42 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C15000001</InternalOrderNo>
+    <InternalOrderID>ORX10C15000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:43 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000001</InternalOrderNo>
+    <InternalOrderID>ORX10C17000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:44 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000003</InternalOrderNo>
+    <InternalOrderID>ORX10C17000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:44 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C17000004</InternalOrderNo>
+    <InternalOrderID>ORX10C17000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:45 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000001</InternalOrderNo>
+    <InternalOrderID>ORX10C18000001</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:45 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000002</InternalOrderNo>
+    <InternalOrderID>ORX10C18000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:46 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000003</InternalOrderNo>
+    <InternalOrderID>ORX10C18000003</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:47 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000004</InternalOrderNo>
+    <InternalOrderID>ORX10C18000004</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:47 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10C18000005</InternalOrderNo>
+    <InternalOrderID>ORX10C18000005</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
+[14:46:48 ] :: <?xml version="1.0" encoding="utf-16"?>
+<CheckGLBudget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CaseMethod>EXJ</CaseMethod>
+  <GLBudget>
+    <InternalOrderNo>X10J19000002</InternalOrderNo>
+    <InternalOrderID>ORX10J19000002</InternalOrderID>
+    <InternalOrdertype>EXJ</InternalOrdertype>
+  </GLBudget>
+</CheckGLBudget> 
+**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+
