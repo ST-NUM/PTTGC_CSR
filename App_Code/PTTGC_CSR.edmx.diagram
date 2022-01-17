@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1cce254bf8ea473a9e549d33a5164b24" Name="Diagram1">
+        <EntityTypeShape EntityType="PTTGC_CSR.MT_CCTR_Structure" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.MT_CostCenter" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.MT_GLAccount" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.MT_InternalOrder" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.T_Project" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.T_Project_Approve" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.T_Project_File" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_Budget" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_Budget_Sub" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_Change_Owner" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_CostCenter" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_DateSync" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_GLAccount" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_InternalOrder" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_Map_Budget" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_Map_Budget_Sub" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_User" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TB_User_Permission" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_Log" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_LogMail" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_MasterData" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_MasterData_Sub" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_Menu" Width="1.5" PointX="0.75" PointY="14.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_Organization" Width="1.5" PointX="2.75" PointY="14.75" />
+        <EntityTypeShape EntityType="PTTGC_CSR.TM_ProjectStatus" Width="1.5" PointX="14.75" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

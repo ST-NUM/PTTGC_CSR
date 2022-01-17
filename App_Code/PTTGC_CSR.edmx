@@ -1,0 +1,1289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PTTGC_CSR.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MT_CCTR_Structure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Business_Unit" Type="varchar(max)" />
+          <Property Name="CC_PC_BU" Type="varchar(max)" />
+          <Property Name="DT_Costcenter" Type="varchar(max)" />
+          <Property Name="DT_Costcenter_group" Type="varchar(max)" />
+          <Property Name="Entity" Type="varchar(max)" />
+          <Property Name="EVP_Costcenter" Type="varchar(max)" />
+          <Property Name="OWNER" Type="varchar(max)" />
+          <Property Name="PC_NODE" Type="varchar(max)" />
+          <Property Name="PERFORMER" Type="varchar(max)" />
+          <Property Name="PERFORM_FLAG" Type="varchar(max)" />
+          <Property Name="PoolCCTR" Type="varchar(max)" />
+          <Property Name="Profitcenter" Type="varchar(max)" />
+          <Property Name="REVIEWER" Type="varchar(max)" />
+          <Property Name="REVIEWER_BG" Type="varchar(max)" />
+          <Property Name="Scaling" Type="varchar(max)" />
+          <Property Name="ServiceCostcenter" Type="varchar(max)" />
+          <Property Name="CommonCostcenter" Type="varchar(max)" />
+          <Property Name="VP_Costcenter" Type="varchar(max)" />
+          <Property Name="H1_APPROVAL" Type="varchar(max)" />
+          <Property Name="H2_BU" Type="varchar(max)" />
+          <Property Name="H3_ENTITY" Type="varchar(max)" />
+          <Property Name="BudgetHolder" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="MT_CostCenter">
+          <Key>
+            <PropertyRef Name="CostCenter" />
+            <PropertyRef Name="ComCode" />
+            <PropertyRef Name="ValidTo" />
+          </Key>
+          <Property Name="CostCenter" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ComCode" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="BudgetHolder" Type="varchar" MaxLength="10" />
+          <Property Name="BudgetHolderName" Type="varchar" MaxLength="60" />
+          <Property Name="ShortDesc" Type="varchar" MaxLength="120" />
+          <Property Name="FullDesc" Type="varchar(max)" />
+          <Property Name="Active" Type="varchar" MaxLength="1" />
+          <Property Name="ValidFrom" Type="datetime" Nullable="false" />
+          <Property Name="ValidTo" Type="datetime" Nullable="false" />
+          <Property Name="ProfitCenter" Type="varchar" MaxLength="15" />
+          <Property Name="CostCat" Type="varchar" MaxLength="10" />
+          <Property Name="UpdateBy" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateOn" Type="datetime" />
+          <Property Name="ControlArea" Type="varchar" MaxLength="4" />
+          <Property Name="ObjectNumber" Type="varchar" MaxLength="22" />
+          <Property Name="LockActualPK" Type="varchar" MaxLength="1" />
+          <Property Name="LockPlanPK" Type="varchar" MaxLength="1" />
+          <Property Name="PersResp" Type="varchar" MaxLength="20" />
+          <Property Name="StdRelation" Type="varchar" MaxLength="12" />
+          <Property Name="GeneralName" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MT_GLAccount">
+          <Key>
+            <PropertyRef Name="sGLCode" />
+          </Key>
+          <Property Name="sGLCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="sCompCode" Type="varchar" MaxLength="2" />
+          <Property Name="sGLDesc" Type="varchar(max)" />
+          <Property Name="cStatus" Type="varchar" MaxLength="1" />
+          <Property Name="sGLFullDesc" Type="varchar(max)" />
+          <Property Name="sUpdateBy" Type="varchar" MaxLength="20" />
+          <Property Name="sUpdateOn" Type="datetime" />
+          <Property Name="sGLOPXGroup" Type="varchar" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="MT_InternalOrder">
+          <Key>
+            <PropertyRef Name="IO" />
+            <PropertyRef Name="ComCode" />
+          </Key>
+          <Property Name="IO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ComCode" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="IOType" Type="varchar" MaxLength="4" />
+          <Property Name="IOCategory" Type="varchar" MaxLength="7" />
+          <Property Name="RespCCTR" Type="varchar" MaxLength="10" />
+          <Property Name="CreatedStatus" Type="varchar" MaxLength="1" />
+          <Property Name="ReleasedStatus" Type="varchar" MaxLength="1" />
+          <Property Name="CompletedStatus" Type="varchar" MaxLength="1" />
+          <Property Name="ClosedStatus" Type="varchar" MaxLength="1" />
+          <Property Name="DeleteFlag" Type="varchar" MaxLength="1" />
+          <Property Name="ProfitCenter" Type="varchar" MaxLength="10" />
+          <Property Name="BudgetHolder" Type="varchar" MaxLength="12" />
+          <Property Name="BudgetHolderName" Type="varchar" MaxLength="80" />
+          <Property Name="ExternalOrder" Type="varchar" MaxLength="20" />
+          <Property Name="UpdateBy" Type="varchar" MaxLength="30" />
+          <Property Name="UpdateOn" Type="datetime" />
+          <Property Name="ControlArea" Type="varchar" MaxLength="4" />
+          <Property Name="ObjectNumber" Type="varchar" MaxLength="22" />
+          <Property Name="dCreateOn" Type="datetime" />
+          <Property Name="CloseDate" Type="datetime" />
+          <Property Name="LockStatus" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="T_Project">
+          <Key>
+            <PropertyRef Name="nProjectID" />
+          </Key>
+          <Property Name="nProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sProjectCode" Type="varchar" MaxLength="8" />
+          <Property Name="nProjectType" Type="int" />
+          <Property Name="sProjectName" Type="varchar" MaxLength="250" />
+          <Property Name="nYear" Type="int" Nullable="false" />
+          <Property Name="sCostCenterID" Type="varchar" MaxLength="10" />
+          <Property Name="sIOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="nMonthStart" Type="int" />
+          <Property Name="nMonthEnd" Type="int" />
+          <Property Name="nBudget" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="nBudgetUsed" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="sInternalD" Type="varchar(max)" />
+          <Property Name="sExternalD" Type="varchar(max)" />
+          <Property Name="sObjectiveD" Type="varchar(max)" />
+          <Property Name="nDimensionID" Type="int" />
+          <Property Name="nDimensionSubID" Type="int" />
+          <Property Name="sOrgID" Type="varchar" MaxLength="10" />
+          <Property Name="nOwnerID" Type="int" />
+          <Property Name="sObjective" Type="varchar(max)" />
+          <Property Name="sBenefit" Type="varchar(max)" />
+          <Property Name="sRemark" Type="varchar(max)" />
+          <Property Name="sApproverID" Type="varchar" MaxLength="20" />
+          <Property Name="IsPassApprove" Type="bit" Nullable="false" />
+          <Property Name="nStatusID" Type="int" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="IsCreateByAdmin" Type="bit" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" Nullable="false" />
+          <Property Name="dCreate" Type="datetime" Nullable="false" />
+          <Property Name="nUpdateBy" Type="int" Nullable="false" />
+          <Property Name="dUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Project_Approve">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nProjectID" Type="int" Nullable="false" />
+          <Property Name="nStatusID" Type="int" />
+          <Property Name="sComment" Type="varchar(max)" />
+          <Property Name="nActionBy" Type="int" />
+          <Property Name="dAction" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Project_File">
+          <Key>
+            <PropertyRef Name="nProjectID" />
+            <PropertyRef Name="IsPic" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nProjectID" Type="int" Nullable="false" />
+          <Property Name="IsPic" Type="bit" Nullable="false" />
+          <Property Name="nItem" Type="int" Nullable="false" />
+          <Property Name="sFilename" Type="varchar" MaxLength="250" />
+          <Property Name="sSysFileName" Type="varchar" MaxLength="250" />
+          <Property Name="sPath" Type="varchar" MaxLength="250" />
+          <Property Name="nUpdateBy" Type="int" Nullable="false" />
+          <Property Name="dUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Budget">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sFilename" Type="varchar" MaxLength="250" />
+          <Property Name="sSysFileName" Type="varchar" MaxLength="250" />
+          <Property Name="sPath" Type="varchar" MaxLength="250" />
+          <Property Name="nRow" Type="int" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" Nullable="false" />
+          <Property Name="dCreate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Budget_Sub">
+          <Key>
+            <PropertyRef Name="nID" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nID" Type="int" Nullable="false" />
+          <Property Name="nItem" Type="int" Nullable="false" />
+          <Property Name="nProjectID" Type="int" Nullable="false" />
+          <Property Name="nPeriod" Type="int" Nullable="false" />
+          <Property Name="sIOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="dPostingDate" Type="date" Nullable="false" />
+          <Property Name="sDescription" Type="nvarchar" MaxLength="400" />
+          <Property Name="nValInRepCur" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="sNameOffsetting" Type="nvarchar" MaxLength="400" />
+          <Property Name="sGLID" Type="nvarchar" MaxLength="10" />
+          <Property Name="nObjective" Type="int" />
+          <Property Name="nArea" Type="int" Nullable="false" />
+          <Property Name="sInternal" Type="nvarchar" MaxLength="250" />
+          <Property Name="sExternal" Type="nvarchar" MaxLength="250" />
+          <Property Name="nPA" Type="int" Nullable="false" />
+          <Property Name="nUpdateBy" Type="int" Nullable="false" />
+          <Property Name="dUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Change_Owner">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nProjectID" Type="int" Nullable="false" />
+          <Property Name="nOwnerID" Type="int" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" Nullable="false" />
+          <Property Name="dCreate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_CostCenter">
+          <Key>
+            <PropertyRef Name="sCostCenterID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sCostCenterID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="nYear" Type="int" Nullable="false" />
+          <Property Name="sCostCenterName" Type="varchar" MaxLength="20" />
+          <Property Name="sCostCenterHeadID" Type="varchar" MaxLength="10" />
+          <Property Name="nBudget" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nBudgetUsed" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" />
+          <Property Name="dCreate" Type="datetime" />
+          <Property Name="nUpdateBy" Type="int" />
+          <Property Name="dUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TB_DateSync">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nUpdateBy" Type="int" />
+          <Property Name="dUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TB_GLAccount">
+          <Key>
+            <PropertyRef Name="sGLID" />
+            <PropertyRef Name="sIOID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sGLID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="sIOID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nYear" Type="int" Nullable="false" />
+          <Property Name="sCostCenterID" Type="varchar" MaxLength="10" />
+          <Property Name="sGLName" Type="nvarchar" MaxLength="250" />
+          <Property Name="nBudget" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nBudgetUsed" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" />
+          <Property Name="dCreate" Type="datetime" />
+          <Property Name="nUpdateBy" Type="int" />
+          <Property Name="dUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TB_InternalOrder">
+          <Key>
+            <PropertyRef Name="sIOID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sIOID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="nYear" Type="int" Nullable="false" />
+          <Property Name="sIOName" Type="nvarchar(max)" />
+          <Property Name="sCostCenterID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="nBudget" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nBudgetUsed" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" />
+          <Property Name="dCreate" Type="datetime" />
+          <Property Name="nUpdateBy" Type="int" />
+          <Property Name="dUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TB_Map_Budget">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nYear" Type="int" Nullable="false" />
+          <Property Name="nRow" Type="int" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" Nullable="false" />
+          <Property Name="dCreate" Type="datetime" Nullable="false" />
+          <Property Name="nUpdateBy" Type="int" Nullable="false" />
+          <Property Name="dUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_Map_Budget_Sub">
+          <Key>
+            <PropertyRef Name="nID" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nID" Type="int" Nullable="false" />
+          <Property Name="nItem" Type="int" Nullable="false" />
+          <Property Name="sIOID" Type="nvarchar" MaxLength="50" />
+          <Property Name="sGLID" Type="nvarchar" MaxLength="10" />
+          <Property Name="nProjectType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_User">
+          <Key>
+            <PropertyRef Name="nUserID" />
+          </Key>
+          <Property Name="nUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sUserID" Type="varchar" MaxLength="20" />
+          <Property Name="sPassword" Type="nvarchar" MaxLength="500" />
+          <Property Name="sPasswordEncrypt" Type="nvarchar" MaxLength="500" />
+          <Property Name="sFirstname" Type="nvarchar" MaxLength="100" />
+          <Property Name="sLastname" Type="nvarchar" MaxLength="100" />
+          <Property Name="sEmail" Type="nvarchar" MaxLength="40" />
+          <Property Name="IsGC" Type="bit" Nullable="false" />
+          <Property Name="nRole" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" Nullable="false" />
+          <Property Name="dCreate" Type="datetime" Nullable="false" />
+          <Property Name="nUpdateBy" Type="int" Nullable="false" />
+          <Property Name="dUpdate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_User_Permission">
+          <Key>
+            <PropertyRef Name="nUserID" />
+            <PropertyRef Name="nMenuID" />
+          </Key>
+          <Property Name="nUserID" Type="int" Nullable="false" />
+          <Property Name="nMenuID" Type="int" Nullable="false" />
+          <Property Name="nPermission" Type="int" />
+        </EntityType>
+        <EntityType Name="TM_Log">
+          <Key>
+            <PropertyRef Name="nLogID" />
+          </Key>
+          <Property Name="nLogID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dLog" Type="datetime" />
+          <Property Name="nUserID" Type="int" />
+          <Property Name="nMenuID" Type="int" />
+          <Property Name="sMenuName" Type="varchar" MaxLength="50" />
+          <Property Name="sEvent" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TM_LogMail">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sTo" Type="varchar" MaxLength="500" />
+          <Property Name="sCc" Type="varchar" MaxLength="500" />
+          <Property Name="sSubject" Type="varchar" MaxLength="250" />
+          <Property Name="sMessage" Type="varchar(max)" />
+          <Property Name="IsSend" Type="bit" />
+          <Property Name="sMessage_Error" Type="varchar" MaxLength="500" />
+          <Property Name="dSend" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TM_MasterData">
+          <Key>
+            <PropertyRef Name="nMainID" />
+          </Key>
+          <Property Name="nMainID" Type="int" Nullable="false" />
+          <Property Name="sName" Type="varchar" MaxLength="50" />
+          <Property Name="sDescription" Type="varchar" MaxLength="50" />
+          <Property Name="IsManage" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TM_MasterData_Sub">
+          <Key>
+            <PropertyRef Name="nSubID" />
+          </Key>
+          <Property Name="nSubID" Type="int" Nullable="false" />
+          <Property Name="nMainID" Type="int" Nullable="false" />
+          <Property Name="sName" Type="varchar" MaxLength="250" />
+          <Property Name="sDescription" Type="nvarchar" MaxLength="2000" />
+          <Property Name="nOrder" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="nCreateBy" Type="int" />
+          <Property Name="dCreate" Type="datetime" />
+          <Property Name="nUpdateBy" Type="int" />
+          <Property Name="dUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="TM_Menu">
+          <Key>
+            <PropertyRef Name="nMenuID" />
+          </Key>
+          <Property Name="nMenuID" Type="int" Nullable="false" />
+          <Property Name="sMenuName" Type="varchar" MaxLength="100" />
+          <Property Name="nMenuHead" Type="int" />
+          <Property Name="nLevel" Type="int" />
+          <Property Name="sMenuLink" Type="varchar" MaxLength="100" />
+          <Property Name="sIcon" Type="varchar" MaxLength="50" />
+          <Property Name="nMenuOrder" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TM_Organization">
+          <Key>
+            <PropertyRef Name="sOrgID" />
+          </Key>
+          <Property Name="sOrgID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="sOrgName" Type="varchar" MaxLength="250" />
+          <Property Name="sOrgNameAbbr" Type="varchar" MaxLength="250" />
+          <Property Name="nLevel" Type="int" />
+        </EntityType>
+        <EntityType Name="TM_ProjectStatus">
+          <Key>
+            <PropertyRef Name="nStatusID" />
+          </Key>
+          <Property Name="nStatusID" Type="int" Nullable="false" />
+          <Property Name="sStatusName" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <Function Name="CreateProjectCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nProjectID" Type="int" Mode="In" />
+          <Parameter Name="sProjectType" Type="char" Mode="In" />
+          <Parameter Name="nProjectType" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="PTTGC_CSRStoreContainer">
+          <EntitySet Name="MT_CCTR_Structure" EntityType="Self.MT_CCTR_Structure" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MT_CostCenter" EntityType="Self.MT_CostCenter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MT_GLAccount" EntityType="Self.MT_GLAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MT_InternalOrder" EntityType="Self.MT_InternalOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Project" EntityType="Self.T_Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Project_Approve" EntityType="Self.T_Project_Approve" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Project_File" EntityType="Self.T_Project_File" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Budget" EntityType="Self.TB_Budget" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Budget_Sub" EntityType="Self.TB_Budget_Sub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Change_Owner" EntityType="Self.TB_Change_Owner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_CostCenter" EntityType="Self.TB_CostCenter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_DateSync" EntityType="Self.TB_DateSync" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_GLAccount" EntityType="Self.TB_GLAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_InternalOrder" EntityType="Self.TB_InternalOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Map_Budget" EntityType="Self.TB_Map_Budget" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_Map_Budget_Sub" EntityType="Self.TB_Map_Budget_Sub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_User" EntityType="Self.TB_User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_User_Permission" EntityType="Self.TB_User_Permission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_Log" EntityType="Self.TM_Log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_LogMail" EntityType="Self.TM_LogMail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_MasterData" EntityType="Self.TM_MasterData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_MasterData_Sub" EntityType="Self.TM_MasterData_Sub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_Menu" EntityType="Self.TM_Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_Organization" EntityType="Self.TM_Organization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TM_ProjectStatus" EntityType="Self.TM_ProjectStatus" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PTTGC_CSR" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PTTGC_CSREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MT_CCTR_Structure" EntityType="PTTGC_CSR.MT_CCTR_Structure" />
+          <EntitySet Name="MT_CostCenter" EntityType="PTTGC_CSR.MT_CostCenter" />
+          <EntitySet Name="MT_GLAccount" EntityType="PTTGC_CSR.MT_GLAccount" />
+          <EntitySet Name="MT_InternalOrder" EntityType="PTTGC_CSR.MT_InternalOrder" />
+          <EntitySet Name="T_Project" EntityType="PTTGC_CSR.T_Project" />
+          <EntitySet Name="T_Project_Approve" EntityType="PTTGC_CSR.T_Project_Approve" />
+          <EntitySet Name="T_Project_File" EntityType="PTTGC_CSR.T_Project_File" />
+          <EntitySet Name="TB_Budget" EntityType="PTTGC_CSR.TB_Budget" />
+          <EntitySet Name="TB_Budget_Sub" EntityType="PTTGC_CSR.TB_Budget_Sub" />
+          <EntitySet Name="TB_Change_Owner" EntityType="PTTGC_CSR.TB_Change_Owner" />
+          <EntitySet Name="TB_CostCenter" EntityType="PTTGC_CSR.TB_CostCenter" />
+          <EntitySet Name="TB_DateSync" EntityType="PTTGC_CSR.TB_DateSync" />
+          <EntitySet Name="TB_GLAccount" EntityType="PTTGC_CSR.TB_GLAccount" />
+          <EntitySet Name="TB_InternalOrder" EntityType="PTTGC_CSR.TB_InternalOrder" />
+          <EntitySet Name="TB_Map_Budget" EntityType="PTTGC_CSR.TB_Map_Budget" />
+          <EntitySet Name="TB_Map_Budget_Sub" EntityType="PTTGC_CSR.TB_Map_Budget_Sub" />
+          <EntitySet Name="TB_User" EntityType="PTTGC_CSR.TB_User" />
+          <EntitySet Name="TB_User_Permission" EntityType="PTTGC_CSR.TB_User_Permission" />
+          <EntitySet Name="TM_Log" EntityType="PTTGC_CSR.TM_Log" />
+          <EntitySet Name="TM_LogMail" EntityType="PTTGC_CSR.TM_LogMail" />
+          <EntitySet Name="TM_MasterData" EntityType="PTTGC_CSR.TM_MasterData" />
+          <EntitySet Name="TM_MasterData_Sub" EntityType="PTTGC_CSR.TM_MasterData_Sub" />
+          <EntitySet Name="TM_Menu" EntityType="PTTGC_CSR.TM_Menu" />
+          <EntitySet Name="TM_Organization" EntityType="PTTGC_CSR.TM_Organization" />
+          <EntitySet Name="TM_ProjectStatus" EntityType="PTTGC_CSR.TM_ProjectStatus" />
+        </EntityContainer>
+        <EntityType Name="MT_CCTR_Structure">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Business_Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CC_PC_BU" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DT_Costcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DT_Costcenter_group" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Entity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EVP_Costcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="OWNER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PC_NODE" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PERFORMER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PERFORM_FLAG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PoolCCTR" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Profitcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEWER" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="REVIEWER_BG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Scaling" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ServiceCostcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CommonCostcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="VP_Costcenter" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="H1_APPROVAL" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="H2_BU" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="H3_ENTITY" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BudgetHolder" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MT_CostCenter">
+          <Key>
+            <PropertyRef Name="CostCenter" />
+            <PropertyRef Name="ComCode" />
+            <PropertyRef Name="ValidTo" />
+          </Key>
+          <Property Name="CostCenter" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ComCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BudgetHolder" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BudgetHolderName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ShortDesc" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="FullDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ValidFrom" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ValidTo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ProfitCenter" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CostCat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateOn" Type="DateTime" Precision="3" />
+          <Property Name="ControlArea" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ObjectNumber" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="LockActualPK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LockPlanPK" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PersResp" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StdRelation" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="GeneralName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MT_GLAccount">
+          <Key>
+            <PropertyRef Name="sGLCode" />
+          </Key>
+          <Property Name="sGLCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sCompCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="sGLDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="cStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="sGLFullDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sUpdateBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sUpdateOn" Type="DateTime" Precision="3" />
+          <Property Name="sGLOPXGroup" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MT_InternalOrder">
+          <Key>
+            <PropertyRef Name="IO" />
+            <PropertyRef Name="ComCode" />
+          </Key>
+          <Property Name="IO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ComCode" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IOType" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="IOCategory" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="RespCCTR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ReleasedStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CompletedStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ClosedStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DeleteFlag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ProfitCenter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="BudgetHolder" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="BudgetHolderName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ExternalOrder" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UpdateOn" Type="DateTime" Precision="3" />
+          <Property Name="ControlArea" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ObjectNumber" Type="String" MaxLength="22" FixedLength="false" Unicode="false" />
+          <Property Name="dCreateOn" Type="DateTime" Precision="3" />
+          <Property Name="CloseDate" Type="DateTime" Precision="3" />
+          <Property Name="LockStatus" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="T_Project">
+          <Key>
+            <PropertyRef Name="nProjectID" />
+          </Key>
+          <Property Name="nProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sProjectCode" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="nProjectType" Type="Int32" />
+          <Property Name="sProjectName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="nYear" Type="Int32" Nullable="false" />
+          <Property Name="sCostCenterID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sIOID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nMonthStart" Type="Int32" />
+          <Property Name="nMonthEnd" Type="Int32" />
+          <Property Name="nBudget" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="nBudgetUsed" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="sInternalD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sExternalD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sObjectiveD" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nDimensionID" Type="Int32" />
+          <Property Name="nDimensionSubID" Type="Int32" />
+          <Property Name="sOrgID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nOwnerID" Type="Int32" />
+          <Property Name="sObjective" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sBenefit" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="sApproverID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsPassApprove" Type="Boolean" Nullable="false" />
+          <Property Name="nStatusID" Type="Int32" Nullable="false" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="IsCreateByAdmin" Type="Boolean" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" Nullable="false" />
+          <Property Name="dCreate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="dUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_Project_Approve">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nProjectID" Type="Int32" Nullable="false" />
+          <Property Name="nStatusID" Type="Int32" />
+          <Property Name="sComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nActionBy" Type="Int32" />
+          <Property Name="dAction" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_Project_File">
+          <Key>
+            <PropertyRef Name="nProjectID" />
+            <PropertyRef Name="IsPic" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nProjectID" Type="Int32" Nullable="false" />
+          <Property Name="IsPic" Type="Boolean" Nullable="false" />
+          <Property Name="nItem" Type="Int32" Nullable="false" />
+          <Property Name="sFilename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sSysFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="nUpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="dUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Budget">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sFilename" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sSysFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="nRow" Type="Int32" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" Nullable="false" />
+          <Property Name="dCreate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Budget_Sub">
+          <Key>
+            <PropertyRef Name="nID" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" />
+          <Property Name="nItem" Type="Int32" Nullable="false" />
+          <Property Name="nProjectID" Type="Int32" Nullable="false" />
+          <Property Name="nPeriod" Type="Int32" Nullable="false" />
+          <Property Name="sIOID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dPostingDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sDescription" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="nValInRepCur" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="sNameOffsetting" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="sGLID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="nObjective" Type="Int32" />
+          <Property Name="nArea" Type="Int32" Nullable="false" />
+          <Property Name="sInternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="sExternal" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="nPA" Type="Int32" Nullable="false" />
+          <Property Name="nUpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="dUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Change_Owner">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nProjectID" Type="Int32" Nullable="false" />
+          <Property Name="nOwnerID" Type="Int32" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" Nullable="false" />
+          <Property Name="dCreate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_CostCenter">
+          <Key>
+            <PropertyRef Name="sCostCenterID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sCostCenterID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nYear" Type="Int32" Nullable="false" />
+          <Property Name="sCostCenterName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sCostCenterHeadID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nBudget" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nBudgetUsed" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nCreateBy" Type="Int32" />
+          <Property Name="dCreate" Type="DateTime" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" />
+          <Property Name="dUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_DateSync">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nUpdateBy" Type="Int32" />
+          <Property Name="dUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_GLAccount">
+          <Key>
+            <PropertyRef Name="sGLID" />
+            <PropertyRef Name="sIOID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sGLID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="sIOID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nYear" Type="Int32" Nullable="false" />
+          <Property Name="sCostCenterID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sGLName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="nBudget" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nBudgetUsed" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nCreateBy" Type="Int32" />
+          <Property Name="dCreate" Type="DateTime" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" />
+          <Property Name="dUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_InternalOrder">
+          <Key>
+            <PropertyRef Name="sIOID" />
+            <PropertyRef Name="nYear" />
+          </Key>
+          <Property Name="sIOID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nYear" Type="Int32" Nullable="false" />
+          <Property Name="sIOName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="sCostCenterID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nBudget" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nBudgetUsed" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="nCreateBy" Type="Int32" />
+          <Property Name="dCreate" Type="DateTime" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" />
+          <Property Name="dUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Map_Budget">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nYear" Type="Int32" Nullable="false" />
+          <Property Name="nRow" Type="Int32" Nullable="false" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" Nullable="false" />
+          <Property Name="dCreate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="dUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_Map_Budget_Sub">
+          <Key>
+            <PropertyRef Name="nID" />
+            <PropertyRef Name="nItem" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" />
+          <Property Name="nItem" Type="Int32" Nullable="false" />
+          <Property Name="sIOID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sGLID" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="nProjectType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TB_User">
+          <Key>
+            <PropertyRef Name="nUserID" />
+          </Key>
+          <Property Name="nUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sUserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="sPasswordEncrypt" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="sFirstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sLastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="sEmail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="IsGC" Type="Boolean" Nullable="false" />
+          <Property Name="nRole" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" Nullable="false" />
+          <Property Name="dCreate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" Nullable="false" />
+          <Property Name="dUpdate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TB_User_Permission">
+          <Key>
+            <PropertyRef Name="nUserID" />
+            <PropertyRef Name="nMenuID" />
+          </Key>
+          <Property Name="nUserID" Type="Int32" Nullable="false" />
+          <Property Name="nMenuID" Type="Int32" Nullable="false" />
+          <Property Name="nPermission" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TM_Log">
+          <Key>
+            <PropertyRef Name="nLogID" />
+          </Key>
+          <Property Name="nLogID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dLog" Type="DateTime" Precision="3" />
+          <Property Name="nUserID" Type="Int32" />
+          <Property Name="nMenuID" Type="Int32" />
+          <Property Name="sMenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sEvent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TM_LogMail">
+          <Key>
+            <PropertyRef Name="nID" />
+          </Key>
+          <Property Name="nID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sTo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sCc" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sSubject" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sMessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="IsSend" Type="Boolean" />
+          <Property Name="sMessage_Error" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="dSend" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TM_MasterData">
+          <Key>
+            <PropertyRef Name="nMainID" />
+          </Key>
+          <Property Name="nMainID" Type="Int32" Nullable="false" />
+          <Property Name="sName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsManage" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TM_MasterData_Sub">
+          <Key>
+            <PropertyRef Name="nSubID" />
+          </Key>
+          <Property Name="nSubID" Type="Int32" Nullable="false" />
+          <Property Name="nMainID" Type="Int32" Nullable="false" />
+          <Property Name="sName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="nOrder" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="nCreateBy" Type="Int32" />
+          <Property Name="dCreate" Type="DateTime" Precision="3" />
+          <Property Name="nUpdateBy" Type="Int32" />
+          <Property Name="dUpdate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="TM_Menu">
+          <Key>
+            <PropertyRef Name="nMenuID" />
+          </Key>
+          <Property Name="nMenuID" Type="Int32" Nullable="false" />
+          <Property Name="sMenuName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="nMenuHead" Type="Int32" />
+          <Property Name="nLevel" Type="Int32" />
+          <Property Name="sMenuLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="sIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="nMenuOrder" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TM_Organization">
+          <Key>
+            <PropertyRef Name="sOrgID" />
+          </Key>
+          <Property Name="sOrgID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sOrgName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="sOrgNameAbbr" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="nLevel" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TM_ProjectStatus">
+          <Key>
+            <PropertyRef Name="nStatusID" />
+          </Key>
+          <Property Name="nStatusID" Type="Int32" Nullable="false" />
+          <Property Name="sStatusName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PTTGC_CSRStoreContainer" CdmEntityContainer="PTTGC_CSREntities">
+          <EntitySetMapping Name="MT_CCTR_Structure">
+            <EntityTypeMapping TypeName="PTTGC_CSR.MT_CCTR_Structure">
+              <MappingFragment StoreEntitySet="MT_CCTR_Structure">
+                <ScalarProperty Name="BudgetHolder" ColumnName="BudgetHolder" />
+                <ScalarProperty Name="H3_ENTITY" ColumnName="H3_ENTITY" />
+                <ScalarProperty Name="H2_BU" ColumnName="H2_BU" />
+                <ScalarProperty Name="H1_APPROVAL" ColumnName="H1_APPROVAL" />
+                <ScalarProperty Name="VP_Costcenter" ColumnName="VP_Costcenter" />
+                <ScalarProperty Name="CommonCostcenter" ColumnName="CommonCostcenter" />
+                <ScalarProperty Name="ServiceCostcenter" ColumnName="ServiceCostcenter" />
+                <ScalarProperty Name="Scaling" ColumnName="Scaling" />
+                <ScalarProperty Name="REVIEWER_BG" ColumnName="REVIEWER_BG" />
+                <ScalarProperty Name="REVIEWER" ColumnName="REVIEWER" />
+                <ScalarProperty Name="Profitcenter" ColumnName="Profitcenter" />
+                <ScalarProperty Name="PoolCCTR" ColumnName="PoolCCTR" />
+                <ScalarProperty Name="PERFORM_FLAG" ColumnName="PERFORM_FLAG" />
+                <ScalarProperty Name="PERFORMER" ColumnName="PERFORMER" />
+                <ScalarProperty Name="PC_NODE" ColumnName="PC_NODE" />
+                <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+                <ScalarProperty Name="EVP_Costcenter" ColumnName="EVP_Costcenter" />
+                <ScalarProperty Name="Entity" ColumnName="Entity" />
+                <ScalarProperty Name="DT_Costcenter_group" ColumnName="DT_Costcenter_group" />
+                <ScalarProperty Name="DT_Costcenter" ColumnName="DT_Costcenter" />
+                <ScalarProperty Name="CC_PC_BU" ColumnName="CC_PC_BU" />
+                <ScalarProperty Name="Business_Unit" ColumnName="Business_Unit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MT_CostCenter">
+            <EntityTypeMapping TypeName="PTTGC_CSR.MT_CostCenter">
+              <MappingFragment StoreEntitySet="MT_CostCenter">
+                <ScalarProperty Name="GeneralName" ColumnName="GeneralName" />
+                <ScalarProperty Name="StdRelation" ColumnName="StdRelation" />
+                <ScalarProperty Name="PersResp" ColumnName="PersResp" />
+                <ScalarProperty Name="LockPlanPK" ColumnName="LockPlanPK" />
+                <ScalarProperty Name="LockActualPK" ColumnName="LockActualPK" />
+                <ScalarProperty Name="ObjectNumber" ColumnName="ObjectNumber" />
+                <ScalarProperty Name="ControlArea" ColumnName="ControlArea" />
+                <ScalarProperty Name="UpdateOn" ColumnName="UpdateOn" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="CostCat" ColumnName="CostCat" />
+                <ScalarProperty Name="ProfitCenter" ColumnName="ProfitCenter" />
+                <ScalarProperty Name="ValidTo" ColumnName="ValidTo" />
+                <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="FullDesc" ColumnName="FullDesc" />
+                <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+                <ScalarProperty Name="BudgetHolderName" ColumnName="BudgetHolderName" />
+                <ScalarProperty Name="BudgetHolder" ColumnName="BudgetHolder" />
+                <ScalarProperty Name="ComCode" ColumnName="ComCode" />
+                <ScalarProperty Name="CostCenter" ColumnName="CostCenter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MT_GLAccount">
+            <EntityTypeMapping TypeName="PTTGC_CSR.MT_GLAccount">
+              <MappingFragment StoreEntitySet="MT_GLAccount">
+                <ScalarProperty Name="sGLOPXGroup" ColumnName="sGLOPXGroup" />
+                <ScalarProperty Name="sUpdateOn" ColumnName="sUpdateOn" />
+                <ScalarProperty Name="sUpdateBy" ColumnName="sUpdateBy" />
+                <ScalarProperty Name="sGLFullDesc" ColumnName="sGLFullDesc" />
+                <ScalarProperty Name="cStatus" ColumnName="cStatus" />
+                <ScalarProperty Name="sGLDesc" ColumnName="sGLDesc" />
+                <ScalarProperty Name="sCompCode" ColumnName="sCompCode" />
+                <ScalarProperty Name="sGLCode" ColumnName="sGLCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MT_InternalOrder">
+            <EntityTypeMapping TypeName="PTTGC_CSR.MT_InternalOrder">
+              <MappingFragment StoreEntitySet="MT_InternalOrder">
+                <ScalarProperty Name="LockStatus" ColumnName="LockStatus" />
+                <ScalarProperty Name="CloseDate" ColumnName="CloseDate" />
+                <ScalarProperty Name="dCreateOn" ColumnName="dCreateOn" />
+                <ScalarProperty Name="ObjectNumber" ColumnName="ObjectNumber" />
+                <ScalarProperty Name="ControlArea" ColumnName="ControlArea" />
+                <ScalarProperty Name="UpdateOn" ColumnName="UpdateOn" />
+                <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+                <ScalarProperty Name="ExternalOrder" ColumnName="ExternalOrder" />
+                <ScalarProperty Name="BudgetHolderName" ColumnName="BudgetHolderName" />
+                <ScalarProperty Name="BudgetHolder" ColumnName="BudgetHolder" />
+                <ScalarProperty Name="ProfitCenter" ColumnName="ProfitCenter" />
+                <ScalarProperty Name="DeleteFlag" ColumnName="DeleteFlag" />
+                <ScalarProperty Name="ClosedStatus" ColumnName="ClosedStatus" />
+                <ScalarProperty Name="CompletedStatus" ColumnName="CompletedStatus" />
+                <ScalarProperty Name="ReleasedStatus" ColumnName="ReleasedStatus" />
+                <ScalarProperty Name="CreatedStatus" ColumnName="CreatedStatus" />
+                <ScalarProperty Name="RespCCTR" ColumnName="RespCCTR" />
+                <ScalarProperty Name="IOCategory" ColumnName="IOCategory" />
+                <ScalarProperty Name="IOType" ColumnName="IOType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ComCode" ColumnName="ComCode" />
+                <ScalarProperty Name="IO" ColumnName="IO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Project">
+            <EntityTypeMapping TypeName="PTTGC_CSR.T_Project">
+              <MappingFragment StoreEntitySet="T_Project">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="IsCreateByAdmin" ColumnName="IsCreateByAdmin" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="nStatusID" ColumnName="nStatusID" />
+                <ScalarProperty Name="IsPassApprove" ColumnName="IsPassApprove" />
+                <ScalarProperty Name="sApproverID" ColumnName="sApproverID" />
+                <ScalarProperty Name="sRemark" ColumnName="sRemark" />
+                <ScalarProperty Name="sBenefit" ColumnName="sBenefit" />
+                <ScalarProperty Name="sObjective" ColumnName="sObjective" />
+                <ScalarProperty Name="nOwnerID" ColumnName="nOwnerID" />
+                <ScalarProperty Name="sOrgID" ColumnName="sOrgID" />
+                <ScalarProperty Name="nDimensionSubID" ColumnName="nDimensionSubID" />
+                <ScalarProperty Name="nDimensionID" ColumnName="nDimensionID" />
+                <ScalarProperty Name="sObjectiveD" ColumnName="sObjectiveD" />
+                <ScalarProperty Name="sExternalD" ColumnName="sExternalD" />
+                <ScalarProperty Name="sInternalD" ColumnName="sInternalD" />
+                <ScalarProperty Name="nBudgetUsed" ColumnName="nBudgetUsed" />
+                <ScalarProperty Name="nBudget" ColumnName="nBudget" />
+                <ScalarProperty Name="nMonthEnd" ColumnName="nMonthEnd" />
+                <ScalarProperty Name="nMonthStart" ColumnName="nMonthStart" />
+                <ScalarProperty Name="sIOID" ColumnName="sIOID" />
+                <ScalarProperty Name="sCostCenterID" ColumnName="sCostCenterID" />
+                <ScalarProperty Name="nYear" ColumnName="nYear" />
+                <ScalarProperty Name="sProjectName" ColumnName="sProjectName" />
+                <ScalarProperty Name="nProjectType" ColumnName="nProjectType" />
+                <ScalarProperty Name="sProjectCode" ColumnName="sProjectCode" />
+                <ScalarProperty Name="nProjectID" ColumnName="nProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Project_Approve">
+            <EntityTypeMapping TypeName="PTTGC_CSR.T_Project_Approve">
+              <MappingFragment StoreEntitySet="T_Project_Approve">
+                <ScalarProperty Name="dAction" ColumnName="dAction" />
+                <ScalarProperty Name="nActionBy" ColumnName="nActionBy" />
+                <ScalarProperty Name="sComment" ColumnName="sComment" />
+                <ScalarProperty Name="nStatusID" ColumnName="nStatusID" />
+                <ScalarProperty Name="nProjectID" ColumnName="nProjectID" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Project_File">
+            <EntityTypeMapping TypeName="PTTGC_CSR.T_Project_File">
+              <MappingFragment StoreEntitySet="T_Project_File">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="sPath" ColumnName="sPath" />
+                <ScalarProperty Name="sSysFileName" ColumnName="sSysFileName" />
+                <ScalarProperty Name="sFilename" ColumnName="sFilename" />
+                <ScalarProperty Name="nItem" ColumnName="nItem" />
+                <ScalarProperty Name="IsPic" ColumnName="IsPic" />
+                <ScalarProperty Name="nProjectID" ColumnName="nProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Budget">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_Budget">
+              <MappingFragment StoreEntitySet="TB_Budget">
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="nRow" ColumnName="nRow" />
+                <ScalarProperty Name="sPath" ColumnName="sPath" />
+                <ScalarProperty Name="sSysFileName" ColumnName="sSysFileName" />
+                <ScalarProperty Name="sFilename" ColumnName="sFilename" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Budget_Sub">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_Budget_Sub">
+              <MappingFragment StoreEntitySet="TB_Budget_Sub">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="nPA" ColumnName="nPA" />
+                <ScalarProperty Name="sExternal" ColumnName="sExternal" />
+                <ScalarProperty Name="sInternal" ColumnName="sInternal" />
+                <ScalarProperty Name="nArea" ColumnName="nArea" />
+                <ScalarProperty Name="nObjective" ColumnName="nObjective" />
+                <ScalarProperty Name="sGLID" ColumnName="sGLID" />
+                <ScalarProperty Name="sNameOffsetting" ColumnName="sNameOffsetting" />
+                <ScalarProperty Name="nValInRepCur" ColumnName="nValInRepCur" />
+                <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+                <ScalarProperty Name="dPostingDate" ColumnName="dPostingDate" />
+                <ScalarProperty Name="sIOID" ColumnName="sIOID" />
+                <ScalarProperty Name="nPeriod" ColumnName="nPeriod" />
+                <ScalarProperty Name="nProjectID" ColumnName="nProjectID" />
+                <ScalarProperty Name="nItem" ColumnName="nItem" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Change_Owner">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_Change_Owner">
+              <MappingFragment StoreEntitySet="TB_Change_Owner">
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="nOwnerID" ColumnName="nOwnerID" />
+                <ScalarProperty Name="nProjectID" ColumnName="nProjectID" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_CostCenter">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_CostCenter">
+              <MappingFragment StoreEntitySet="TB_CostCenter">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="nBudgetUsed" ColumnName="nBudgetUsed" />
+                <ScalarProperty Name="nBudget" ColumnName="nBudget" />
+                <ScalarProperty Name="sCostCenterHeadID" ColumnName="sCostCenterHeadID" />
+                <ScalarProperty Name="sCostCenterName" ColumnName="sCostCenterName" />
+                <ScalarProperty Name="nYear" ColumnName="nYear" />
+                <ScalarProperty Name="sCostCenterID" ColumnName="sCostCenterID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_DateSync">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_DateSync">
+              <MappingFragment StoreEntitySet="TB_DateSync">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_GLAccount">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_GLAccount">
+              <MappingFragment StoreEntitySet="TB_GLAccount">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="nBudgetUsed" ColumnName="nBudgetUsed" />
+                <ScalarProperty Name="nBudget" ColumnName="nBudget" />
+                <ScalarProperty Name="sGLName" ColumnName="sGLName" />
+                <ScalarProperty Name="sCostCenterID" ColumnName="sCostCenterID" />
+                <ScalarProperty Name="nYear" ColumnName="nYear" />
+                <ScalarProperty Name="sIOID" ColumnName="sIOID" />
+                <ScalarProperty Name="sGLID" ColumnName="sGLID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_InternalOrder">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_InternalOrder">
+              <MappingFragment StoreEntitySet="TB_InternalOrder">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="nBudgetUsed" ColumnName="nBudgetUsed" />
+                <ScalarProperty Name="nBudget" ColumnName="nBudget" />
+                <ScalarProperty Name="sCostCenterID" ColumnName="sCostCenterID" />
+                <ScalarProperty Name="sIOName" ColumnName="sIOName" />
+                <ScalarProperty Name="nYear" ColumnName="nYear" />
+                <ScalarProperty Name="sIOID" ColumnName="sIOID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Map_Budget">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_Map_Budget">
+              <MappingFragment StoreEntitySet="TB_Map_Budget">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="nRow" ColumnName="nRow" />
+                <ScalarProperty Name="nYear" ColumnName="nYear" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_Map_Budget_Sub">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_Map_Budget_Sub">
+              <MappingFragment StoreEntitySet="TB_Map_Budget_Sub">
+                <ScalarProperty Name="nProjectType" ColumnName="nProjectType" />
+                <ScalarProperty Name="sGLID" ColumnName="sGLID" />
+                <ScalarProperty Name="sIOID" ColumnName="sIOID" />
+                <ScalarProperty Name="nItem" ColumnName="nItem" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_User">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_User">
+              <MappingFragment StoreEntitySet="TB_User">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="nRole" ColumnName="nRole" />
+                <ScalarProperty Name="IsGC" ColumnName="IsGC" />
+                <ScalarProperty Name="sEmail" ColumnName="sEmail" />
+                <ScalarProperty Name="sLastname" ColumnName="sLastname" />
+                <ScalarProperty Name="sFirstname" ColumnName="sFirstname" />
+                <ScalarProperty Name="sPasswordEncrypt" ColumnName="sPasswordEncrypt" />
+                <ScalarProperty Name="sPassword" ColumnName="sPassword" />
+                <ScalarProperty Name="sUserID" ColumnName="sUserID" />
+                <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_User_Permission">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TB_User_Permission">
+              <MappingFragment StoreEntitySet="TB_User_Permission">
+                <ScalarProperty Name="nPermission" ColumnName="nPermission" />
+                <ScalarProperty Name="nMenuID" ColumnName="nMenuID" />
+                <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_Log">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_Log">
+              <MappingFragment StoreEntitySet="TM_Log">
+                <ScalarProperty Name="sEvent" ColumnName="sEvent" />
+                <ScalarProperty Name="sMenuName" ColumnName="sMenuName" />
+                <ScalarProperty Name="nMenuID" ColumnName="nMenuID" />
+                <ScalarProperty Name="nUserID" ColumnName="nUserID" />
+                <ScalarProperty Name="dLog" ColumnName="dLog" />
+                <ScalarProperty Name="nLogID" ColumnName="nLogID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_LogMail">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_LogMail">
+              <MappingFragment StoreEntitySet="TM_LogMail">
+                <ScalarProperty Name="dSend" ColumnName="dSend" />
+                <ScalarProperty Name="sMessage_Error" ColumnName="sMessage_Error" />
+                <ScalarProperty Name="IsSend" ColumnName="IsSend" />
+                <ScalarProperty Name="sMessage" ColumnName="sMessage" />
+                <ScalarProperty Name="sSubject" ColumnName="sSubject" />
+                <ScalarProperty Name="sCc" ColumnName="sCc" />
+                <ScalarProperty Name="sTo" ColumnName="sTo" />
+                <ScalarProperty Name="nID" ColumnName="nID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_MasterData">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_MasterData">
+              <MappingFragment StoreEntitySet="TM_MasterData">
+                <ScalarProperty Name="IsManage" ColumnName="IsManage" />
+                <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+                <ScalarProperty Name="sName" ColumnName="sName" />
+                <ScalarProperty Name="nMainID" ColumnName="nMainID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_MasterData_Sub">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_MasterData_Sub">
+              <MappingFragment StoreEntitySet="TM_MasterData_Sub">
+                <ScalarProperty Name="dUpdate" ColumnName="dUpdate" />
+                <ScalarProperty Name="nUpdateBy" ColumnName="nUpdateBy" />
+                <ScalarProperty Name="dCreate" ColumnName="dCreate" />
+                <ScalarProperty Name="nCreateBy" ColumnName="nCreateBy" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="nOrder" ColumnName="nOrder" />
+                <ScalarProperty Name="sDescription" ColumnName="sDescription" />
+                <ScalarProperty Name="sName" ColumnName="sName" />
+                <ScalarProperty Name="nMainID" ColumnName="nMainID" />
+                <ScalarProperty Name="nSubID" ColumnName="nSubID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_Menu">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_Menu">
+              <MappingFragment StoreEntitySet="TM_Menu">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="nMenuOrder" ColumnName="nMenuOrder" />
+                <ScalarProperty Name="sIcon" ColumnName="sIcon" />
+                <ScalarProperty Name="sMenuLink" ColumnName="sMenuLink" />
+                <ScalarProperty Name="nLevel" ColumnName="nLevel" />
+                <ScalarProperty Name="nMenuHead" ColumnName="nMenuHead" />
+                <ScalarProperty Name="sMenuName" ColumnName="sMenuName" />
+                <ScalarProperty Name="nMenuID" ColumnName="nMenuID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_Organization">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_Organization">
+              <MappingFragment StoreEntitySet="TM_Organization">
+                <ScalarProperty Name="nLevel" ColumnName="nLevel" />
+                <ScalarProperty Name="sOrgNameAbbr" ColumnName="sOrgNameAbbr" />
+                <ScalarProperty Name="sOrgName" ColumnName="sOrgName" />
+                <ScalarProperty Name="sOrgID" ColumnName="sOrgID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TM_ProjectStatus">
+            <EntityTypeMapping TypeName="PTTGC_CSR.TM_ProjectStatus">
+              <MappingFragment StoreEntitySet="TM_ProjectStatus">
+                <ScalarProperty Name="sStatusName" ColumnName="sStatusName" />
+                <ScalarProperty Name="nStatusID" ColumnName="nStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
